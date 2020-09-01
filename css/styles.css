@@ -1,3 +1,56 @@
 * {
     margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+/*
+body {
+    background-image: url("../design/desktop-design.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 13px;
+}
+*/
+body {
+    font-size: 16px;
+    background-color: hsl(210, 46%, 95%);
+}
+.article {
+    position: relative;
+    max-width: 100%;
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+.thumbnail {
+    display: inline-block;
+    position: relative;
+    width: 420px;       
+    height: 420px; 
+}
+
+.thumbnail img{
+    z-index: 0;
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+.article-component {
+    background-color: #fff;
+}
+.avatar{
+    border-radius: 50%;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
 }
