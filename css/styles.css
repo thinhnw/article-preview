@@ -20,26 +20,25 @@ body {
     margin: inherit;
     background-color: #ccc;
     display: flex;
-    flex-direction: row;
+    flex: 1 auto;
     border-radius: 15px;
     overflow: hidden; /* Share media will ignore this */
 }
 
 /* Article preview image */
 .thumbnail {
-    display: inline-block;
     position: relative;
     width: 420px;       
     height: 420px; 
 }
 
 .thumbnail img{
-    z-index: 0;
     width: 420px;
     height: 420px;
     object-fit: cover;
     object-position: 0 0;
 }
+
 /* Article text */
 .article-component {
     background-color: #fff;
@@ -77,14 +76,16 @@ body {
 /* Share button and media */
 .share-div > .media {
     background-color: hsl(217, 19%, 35%);
-    display: block;
+    display: none;
     position: absolute;
     right: -50px;
     bottom: 150px;
     width: 240px;
     height: 60px;
     border-radius: 10px;
-    padding: 0;
+
+    /* display: grid; while hovering */
+    grid-template-columns: 3fr 1fr 1fr 1fr;
 }
 .share-div > .media:after {
     content: '';
@@ -97,33 +98,35 @@ body {
 	border-top-color: hsl(217, 19%, 35%);
     border-left: 15;    
 }
-.share-div > ul > li.share-text {
+.share-div li.share-text {
     color: white;
-    width: 50%;
     text-align: center;
     margin-top: 18px;
 }
-.share-div > ul > li {
+.share-div li {
     list-style-type: none;
-    display: inline-block;
-    width: 15%;
+    display: inline;
+    margin-left: 0;
+    margin-right: 0;
+}
+.share-div img {
+    margin-top: 19px;
 }
 .btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    background: hsl(214, 17%, 51%);
+    background: hsl(217, 19%, 35%);
     position: relative;
+}
+.btn:hover, .btn:focus {
+    background: hsl(214, 17%, 51%);
 }
 svg {
     margin: 12.5px auto;
     fill: white;
     display: block;
-}
-svg:hover,
-svg:focus {
-    fill: red;
 }
 .attribution { 
     font-size: 11px; 
