@@ -2,29 +2,21 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-family: 'Manrope', sans-serif;
 }
-/*
-body {
-    background-image: url("../design/desktop-design.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 13px;
-}
-*/
+
 body {
     font-size: 16px;
     background-color: hsl(210, 46%, 95%);
 }
 .article {
     position: relative;
-    max-width: 100%;
     width: 1024px;
     margin: 0 auto;
     background-color: #ccc;
     display: flex;
     flex-direction: row;
     border-radius: 15px;
-
     overflow: hidden;
 }
 .thumbnail {
@@ -41,11 +33,68 @@ body {
     object-fit: cover;
     object-position: 0 0;
 }
+
 .article-component {
     background-color: #fff;
+    padding: 50px;
+    padding-bottom: 0;
 }
-.avatar{
+.article-component h1 {
+    font-size: 1.8rem;
+}
+.article-component > p {
+    line-height: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.article-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.author {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 80px;
+}
+.author .avatar{
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.author .name-and-date {
+    justify-self: center;
+}
+
+.share-div > .media {
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+    position: absolute;
+}
+.share-div > ul > li {
+    list-style-type: none;
+    display: inline-block;
+}
+.media {
+    border-radius: 5px;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: hsl(214, 17%, 51%);
+    position: relative;
+}
+svg {
+    margin: 12.5px auto;
+    fill: white;
+    display: block;
+}
+svg:hover,
+svg:focus {
+    fill: red;
 }
 .attribution { 
     font-size: 11px; 
