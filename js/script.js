@@ -1,10 +1,18 @@
 let shareButton = document.getElementById("share-button");
 let media = document.getElementsByClassName("media")[0];
 
-function mouseOverFunction() {
-
-    media.style.display = "grid";
+let status = false;
+function mouseClickFunction() {
+    status = !status;
 }
-function mouseLeaveFunction() {
+
+function mouseCancel() {
+    console.log(status);
+    if (status) {
+        media.style.display = "grid";        
+        status = false;
+        return;
+    }
     media.style.display = "none";
+    status = false;
 }
