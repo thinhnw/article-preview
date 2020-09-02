@@ -13,7 +13,7 @@ body {
 .article {
     width: 1024px;
     position: relative; /* Share media will overlay this div */
-    margin: 0 auto;
+    margin: 150px auto 0 auto;    
 }
 .article-content {
     width: 100%;
@@ -77,19 +77,36 @@ body {
 /* Share button and media */
 .share-div > .media {
     background-color: hsl(217, 19%, 35%);
-    display: none;
+    display: block;
     position: absolute;
     right: -50px;
     bottom: 150px;
     width: 240px;
     height: 60px;
-    border-radius: 15px;
-    vertical-align: middle;
+    border-radius: 10px;
+    padding: 0;
+}
+.share-div > .media:after {
+    content: '';
+    position: absolute;
+    right: 100px;
+    top: 60px;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: hsl(217, 19%, 35%);
+    border-left: 15;    
+}
+.share-div > ul > li.share-text {
+    color: white;
+    width: 50%;
     text-align: center;
+    margin-top: 18px;
 }
 .share-div > ul > li {
     list-style-type: none;
     display: inline-block;
+    width: 15%;
 }
 .btn {
     width: 40px;
