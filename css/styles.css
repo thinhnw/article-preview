@@ -9,16 +9,23 @@ body {
     font-size: 16px;
     background-color: hsl(210, 46%, 95%);
 }
+/* Article */
 .article {
-    position: relative;
     width: 1024px;
+    position: relative; /* Share media will overlay this div */
     margin: 0 auto;
+}
+.article-content {
+    width: 100%;
+    margin: inherit;
     background-color: #ccc;
     display: flex;
     flex-direction: row;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* Share media will ignore this */
 }
+
+/* Article preview image */
 .thumbnail {
     display: inline-block;
     position: relative;
@@ -33,7 +40,7 @@ body {
     object-fit: cover;
     object-position: 0 0;
 }
-
+/* Article text */
 .article-component {
     background-color: #fff;
     padding: 50px;
@@ -67,17 +74,22 @@ body {
     justify-self: center;
 }
 
+/* Share button and media */
 .share-div > .media {
     background-color: hsl(217, 19%, 35%);
     display: none;
     position: absolute;
+    right: -50px;
+    bottom: 150px;
+    width: 240px;
+    height: 60px;
+    border-radius: 15px;
+    vertical-align: middle;
+    text-align: center;
 }
 .share-div > ul > li {
     list-style-type: none;
     display: inline-block;
-}
-.media {
-    border-radius: 5px;
 }
 .btn {
     width: 40px;
